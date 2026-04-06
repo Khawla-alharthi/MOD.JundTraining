@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <PackageReference Include="AspNetCore.HealthChecks.UI" Version="9.0.0" />
-    <PackageReference Include="KubernetesClient" Version="18.0.5"/>
+    <PackageReference Include="KubernetesClient" Version="18.0.5" />
     <PackageReference Include="IdentityModel" Version="7.0.0" />
     <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="9.0.0" />
     <PackageReference Include="AspNetCore.HealthChecks.UI.InMemory.Storage" Version="9.0.0" />
@@ -44,6 +44,8 @@
     <ProjectReference Include="..\MOD.Jund.Application\MOD.Jund.Application.csproj" />
     <ProjectReference Include="..\MOD.Jund.HttpApi\MOD.Jund.HttpApi.csproj" />
     <ProjectReference Include="..\MOD.Jund.EntityFrameworkCore\MOD.Jund.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\modules\MOD.Training\src\MOD.Training.HttpApi\MOD.Training.HttpApi.csproj" />
+    <ProjectReference Include="..\..\modules\MOD.Training\src\MOD.Training.Application\MOD.Training.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -44,6 +44,8 @@ using Volo.Abp.Account.Public.Web.ExternalProviders;
 using Volo.Abp.Account.Public.Web;
 using Volo.Abp.Account.Public.Web.Impersonation;
 using Volo.Saas.Host;
+using MOD.Training;
+using MOD.Training.EntityFrameworkCore;
 
 namespace MOD.Jund;
 
@@ -58,7 +60,10 @@ namespace MOD.Jund;
     typeof(AbpAccountPublicWebImpersonationModule),
     typeof(AbpAccountPublicWebOpenIddictModule),
     typeof(AbpSwashbuckleModule),
-    typeof(AbpAspNetCoreSerilogModule)
+    typeof(AbpAspNetCoreSerilogModule),
+    typeof(TrainingHttpApiModule),            
+    typeof(TrainingApplicationModule),        
+    typeof(TrainingEntityFrameworkCoreModule) 
     )]
 public class JundHttpApiHostModule : AbpModule
 {
@@ -109,7 +114,7 @@ public class JundHttpApiHostModule : AbpModule
             {
                 options.DisableTransportSecurityRequirement = true;
             });
-            
+
             Configure<ForwardedHeadersOptions>(options =>
             {
                 options.ForwardedHeaders = ForwardedHeaders.XForwardedProto;
@@ -130,7 +135,7 @@ public class JundHttpApiHostModule : AbpModule
         ConfigureCors(context, configuration);
         ConfigureTheme();
     }
-    
+
     private void ConfigureTheme()
     {
         Configure<LeptonXThemeOptions>(options =>
@@ -197,7 +202,6 @@ public class JundHttpApiHostModule : AbpModule
         });
     }
 
-
     private void ConfigureVirtualFileSystem(ServiceConfigurationContext context)
     {
         var hostingEnvironment = context.Services.GetHostingEnvironment();
@@ -219,6 +223,7 @@ public class JundHttpApiHostModule : AbpModule
         Configure<AbpAspNetCoreMvcOptions>(options =>
         {
             options.ConventionalControllers.Create(typeof(JundApplicationModule).Assembly);
+            options.ConventionalControllers.Create(typeof(TrainingApplicationModule).Assembly); // 👈
         });
     }
 
@@ -258,7 +263,6 @@ public class JundHttpApiHostModule : AbpModule
             });
         });
     }
-    
 
     private void ConfigureImpersonation(ServiceConfigurationContext context, IConfiguration configuration)
     {
@@ -274,7 +278,6 @@ public class JundHttpApiHostModule : AbpModule
     {
         context.Services.AddJundHealthChecks();
     }
-
 
     public override void OnApplicationInitialization(ApplicationInitializationContext context)
     {

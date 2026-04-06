@@ -4,8 +4,6 @@
         "AppName": "Jund",
         "Home": "Home",
         "Date": "Date",
-        "Menu:Training": "Training",
-        "Menu:Vegs": "Vegs",
         "Permission:Dashboard": "Dashboard",
         "Menu:Dashboard": "Dashboard",
         "Menu:HomePage": "Home page",
@@ -67,6 +65,7 @@
         "Filters": "Filters",
         "NameAr": "Name Ar",
         "MinNameAr": "Min Name Ar",
-        "MaxNameAr": "Max Name Ar"
+        "MaxNameAr": "Max Name Ar",
+        "Menu:Trainig": "Training"
     }
 }

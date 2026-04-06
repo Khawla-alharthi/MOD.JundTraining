@@ -26,8 +26,8 @@ function configureRoutes() {
         requiredPolicy: 'Jund.Dashboard.Host  || Jund.Dashboard.Tenant',
       },
       {
-        path: '/training',
-        name: '::Menu:Training', 
+        path: '/training/fruits', 
+        name: '::Menu:Training',
         iconClass: 'fas fa-graduation-cap',
         order: 3,
         layout: eLayoutType.application,
