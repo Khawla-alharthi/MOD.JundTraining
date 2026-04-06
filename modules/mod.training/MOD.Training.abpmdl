@@ -1,0 +1,58 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "MOD.Training.Domain": {
+      "path": "src/MOD.Training.Domain/MOD.Training.Domain.abppkg",
+      "folder": "src"
+    },
+    "MOD.Training.Application.Contracts": {
+      "path": "src/MOD.Training.Application.Contracts/MOD.Training.Application.Contracts.abppkg",
+      "folder": "src"
+    },
+    "MOD.Training.Application": {
+      "path": "src/MOD.Training.Application/MOD.Training.Application.abppkg",
+      "folder": "src"
+    },
+    "MOD.Training.EntityFrameworkCore": {
+      "path": "src/MOD.Training.EntityFrameworkCore/MOD.Training.EntityFrameworkCore.abppkg",
+      "folder": "src"
+    },
+    "MOD.Training.HttpApi": {
+      "path": "src/MOD.Training.HttpApi/MOD.Training.HttpApi.abppkg",
+      "folder": "src"
+    },
+    "MOD.Training.HttpApi.Client": {
+      "path": "src/MOD.Training.HttpApi.Client/MOD.Training.HttpApi.Client.abppkg",
+      "folder": "src"
+    },
+    "MOD.Training.TestBase": {
+      "path": "test/MOD.Training.TestBase/MOD.Training.TestBase.abppkg",
+      "folder": "test"
+    },
+    "MOD.Training.EntityFrameworkCore.Tests": {
+      "path": "test/MOD.Training.EntityFrameworkCore.Tests/MOD.Training.EntityFrameworkCore.Tests.abppkg",
+      "folder": "test"
+    },
+    "MOD.Training.Domain.Tests": {
+      "path": "test/MOD.Training.Domain.Tests/MOD.Training.Domain.Tests.abppkg",
+      "folder": "test"
+    },
+    "MOD.Training.Application.Tests": {
+      "path": "test/MOD.Training.Application.Tests/MOD.Training.Application.Tests.abppkg",
+      "folder": "test"
+    },
+    "MOD.Training.Domain.Shared": {
+      "path": "src/MOD.Training.Domain.Shared/MOD.Training.Domain.Shared.abppkg",
+      "folder": "src"
+    },
+    "MOD.Training.Installer": {
+       "path": "src/MOD.Training.Installer/MOD.Training.Installer.abppkg",
+       "folder": "src"
+    }
+  }
+}

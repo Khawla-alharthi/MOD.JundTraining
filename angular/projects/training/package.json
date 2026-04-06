@@ -1,0 +1,28 @@
+{
+  "name": "@m-oD/training",
+  "version": "0.0.1",
+  "dependencies": {
+    "@abp/ng.core": "~10.1.0",
+    "@abp/ng.oauth": "~10.1.0",
+    "@abp/ng.theme.shared": "~10.1.0",
+    "@abp/ng.components": "~10.1.0",
+    "@volo/abp.commercial.ng.ui": "~10.1.0",
+    "tslib": "^2.1.0"
+  },
+  "module": "fesm2022/m-oD-training.mjs",
+  "typings": "types/m-oD-training.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./types/m-oD-training.d.ts",
+      "default": "./fesm2022/m-oD-training.mjs"
+    },
+    "./config": {
+      "types": "./types/m-oD-training-config.d.ts",
+      "default": "./fesm2022/m-oD-training-config.mjs"
+    }
+  },
+  "sideEffects": false
+}

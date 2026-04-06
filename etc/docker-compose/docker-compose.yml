@@ -1,0 +1,89 @@
+services:
+  jund-angular:
+    image: mod/jund-angular:latest
+    container_name: jund-angular
+    build:
+      context: ../../
+      dockerfile: angular/Dockerfile.local
+    ports:
+      - "4200:80"
+    depends_on:
+      - jund-api
+    volumes:
+      - ./dynamic-env.json://usr/share/nginx/html/dynamic-env.json
+    networks:
+      - abp-network
+
+  jund-api:
+    image: mod/jund-api:latest
+    container_name: jund-api
+    hostname: jund-api
+    build:
+      context: ../../
+      dockerfile: src/MOD.Jund.HttpApi.Host/Dockerfile.local
+    environment:
+      - ASPNETCORE_URLS=https://+:8081;http://+:8080;
+      - Kestrel__Certificates__Default__Path=/app/certs/localhost.pfx
+      - Kestrel__Certificates__Default__Password=4fe48eff-e7a0-4c70-9667-22528bca0896
+      - App__SelfUrl=https://localhost:44302
+      - App__AngularUrl=http://localhost:4200
+      - App_CorsOrigins=http://localhost:4200
+      - App__HealthCheckUrl=http://jund-api:8080/health-status
+      - AuthServer__RequireHttpsMetadata=false
+      - AuthServer__Authority=https://localhost:44303
+      - App__RedirectAllowedUrls=http://localhost:4200
+      - ConnectionStrings__Default=Data Source=sql-server;Initial Catalog=Jund;User Id=sa;Password=myPassw0rd;MultipleActiveResultSets=true;TrustServerCertificate=True;
+    ports:
+      - "44303:8081"
+    depends_on:
+      sql-server:
+        condition: service_healthy
+    restart: on-failure    
+    volumes:
+      - ./certs:/app/certs
+    networks:
+      - abp-network
+  
+
+  db-migrator:
+    image: mod/jund-db-migrator:latest
+    container_name: db-migrator
+    build:
+      context: ../../
+      dockerfile: src/MOD.Jund.DbMigrator/Dockerfile.local
+    environment:
+      - OpenIddict__Applications__Jund_App__RootUrl=http://localhost:4200
+      - OpenIddict__Applications__Jund_Swagger__RootUrl=https://localhost:44303
+      - ConnectionStrings__Default=Data Source=sql-server;Initial Catalog=Jund;User Id=sa;Password=myPassw0rd;MultipleActiveResultSets=true;TrustServerCertificate=True;
+    restart: on-failure
+    depends_on:
+      sql-server:
+        condition: service_healthy
+    networks:
+      - abp-network    
+  
+  sql-server:
+    container_name: sql-server
+    image: mcr.microsoft.com/azure-sql-edge:1.0.7
+    ports:
+      - "1434:1433"
+    environment:
+      SA_PASSWORD: "myPassw0rd"
+      ACCEPT_EULA: "Y"
+    volumes:
+      - sqldata:/var/opt/mssql
+    networks:
+      - abp-network
+    healthcheck:
+      test: /opt/mssql-tools/bin/sqlcmd -S sql-server -U sa -P "myPassw0rd" -Q "SELECT 1" -C -b -o /dev/null
+      interval: 10s
+      timeout: 3s
+      retries: 10
+      start_period: 10s
+volumes:
+  sqldata:
+    name: jund_sqldata
+networks:
+  abp-network:
+    name: jund-network
+    driver: bridge

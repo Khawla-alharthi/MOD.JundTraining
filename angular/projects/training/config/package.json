@@ -1,0 +1,4 @@
+{
+  "module": "../fesm2022/m-oD-training-config.mjs",
+  "typings": "../types/m-oD-training-config.d.ts"
+}

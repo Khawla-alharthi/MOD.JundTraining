@@ -1,0 +1,25 @@
+{
+  "production": true,
+  "application": {
+    "baseUrl":"http://localhost:4200",
+    "name": "Jund",
+    "logoUrl": ""
+  },
+  "oAuthConfig": {
+    "issuer": "https://localhost:44303/",
+    "redirectUri": "http://localhost:4200",
+    "clientId": "Jund_App",
+    "responseType": "code",
+    "scope": "offline_access openid profile email phone Jund"
+  },
+  "apis": {
+    "default": {
+      "url": "https://localhost:44303",
+      "rootNamespace": "Jund"
+    },
+    "AbpAccountPublic": {
+      "url": "https://localhost:44303",
+      "rootNamespace": "AbpAccountPublic"
+    }
+  }
+}

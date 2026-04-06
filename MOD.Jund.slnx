@@ -1,0 +1,31 @@
+<Solution>
+    <Folder Name="/modules/" />
+    <Folder Name="/modules/MOD.Training/" />
+    <Folder Name="/modules/MOD.Training/src/">
+        <Project Path="modules/MOD.Training/src/MOD.Training.Application.Contracts/MOD.Training.Application.Contracts.csproj" />
+        <Project Path="modules/MOD.Training/src/MOD.Training.Application/MOD.Training.Application.csproj" />
+        <Project Path="modules/MOD.Training/src/MOD.Training.Domain.Shared/MOD.Training.Domain.Shared.csproj" />
+        <Project Path="modules/MOD.Training/src/MOD.Training.Domain/MOD.Training.Domain.csproj" />
+        <Project Path="modules/MOD.Training/src/MOD.Training.EntityFrameworkCore/MOD.Training.EntityFrameworkCore.csproj" />
+        <Project Path="modules/MOD.Training/src/MOD.Training.HttpApi.Client/MOD.Training.HttpApi.Client.csproj" />
+        <Project Path="modules/MOD.Training/src/MOD.Training.HttpApi/MOD.Training.HttpApi.csproj" />
+    </Folder>
+    <Folder Name="/src/">
+        <Project Path="src/MOD.Jund.Domain/MOD.Jund.Domain.csproj" />
+        <Project Path="src/MOD.Jund.Application/MOD.Jund.Application.csproj" />
+        <Project Path="src/MOD.Jund.EntityFrameworkCore/MOD.Jund.EntityFrameworkCore.csproj" />
+        <Project Path="src/MOD.Jund.Domain.Shared/MOD.Jund.Domain.Shared.csproj" />
+        <Project Path="src/MOD.Jund.Application.Contracts/MOD.Jund.Application.Contracts.csproj" />
+        <Project Path="src/MOD.Jund.HttpApi/MOD.Jund.HttpApi.csproj" />
+        <Project Path="src/MOD.Jund.HttpApi.Client/MOD.Jund.HttpApi.Client.csproj" />
+        <Project Path="src/MOD.Jund.DbMigrator/MOD.Jund.DbMigrator.csproj" />
+        <Project Path="src/MOD.Jund.HttpApi.Host/MOD.Jund.HttpApi.Host.csproj" />
+    </Folder>
+    <Folder Name="/test/">
+        <Project Path="test/MOD.Jund.Application.Tests/MOD.Jund.Application.Tests.csproj" />
+        <Project Path="test/MOD.Jund.EntityFrameworkCore.Tests/MOD.Jund.EntityFrameworkCore.Tests.csproj" />
+        <Project Path="test/MOD.Jund.TestBase/MOD.Jund.TestBase.csproj" />
+        <Project Path="test/MOD.Jund.Domain.Tests/MOD.Jund.Domain.Tests.csproj" />
+        <Project Path="test/MOD.Jund.HttpApi.Client.ConsoleTestApp/MOD.Jund.HttpApi.Client.ConsoleTestApp.csproj" />
+    </Folder>
+</Solution>

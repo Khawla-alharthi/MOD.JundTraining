@@ -1,0 +1,129 @@
+{
+  "template": "app",
+  "imports": {
+    "Volo.Abp.LeptonXTheme": {
+      "version": "5.1.0",
+      "isInstalled": true,
+      "creationTime": "04/06/2026 14:14:26 +00:00"      
+    },
+    "Volo.Abp.TextTemplateManagement": {
+      "version": "10.1.0",
+      "isInstalled": true,
+      "creationTime": "04/06/2026 14:14:26 +00:00"
+    },
+    "Volo.Abp.LanguageManagement": {
+      "version": "10.1.0",
+      "isInstalled": true,
+      "creationTime": "04/06/2026 14:14:26 +00:00"
+    },
+    "Volo.Abp.OpenIddict.Pro": {
+      "version": "10.1.0",
+      "isInstalled": true,
+      "creationTime": "04/06/2026 14:14:26 +00:00"
+    },
+    "Volo.Abp.Gdpr": {
+      "version": "10.1.0",
+      "isInstalled": true,
+      "creationTime": "04/06/2026 14:14:26 +00:00"
+    },
+    "Volo.Abp.AuditLogging.Pro": {
+      "version": "10.1.0",
+      "isInstalled": true,
+      "creationTime": "04/06/2026 14:14:26 +00:00"
+    },
+    "Volo.Saas": {
+      "version": "10.1.0",
+      "isInstalled": true,
+      "creationTime": "04/06/2026 14:14:26 +00:00"
+    },
+    "Volo.Abp.Identity.Pro": {
+      "version": "10.1.0",
+      "isInstalled": true,
+      "creationTime": "04/06/2026 14:14:26 +00:00"
+    },
+    "Volo.Abp.Account.Pro": {
+      "version": "10.1.0",
+      "isInstalled": true,
+      "creationTime": "04/06/2026 14:14:26 +00:00"
+    },
+    "Volo.Abp.SettingManagement": {
+      "version": "10.1.0",
+      "isInstalled": true,
+      "creationTime": "04/06/2026 14:14:26 +00:00"
+    },
+    "Volo.Abp.PermissionManagement": {
+      "version": "10.1.0",
+      "isInstalled": true,
+      "creationTime": "04/06/2026 14:14:26 +00:00"
+    },
+    "Volo.Abp.FeatureManagement": {
+      "version": "10.1.0",
+      "isInstalled": true,
+      "creationTime": "04/06/2026 14:14:26 +00:00"
+    }
+  },
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "MOD.Jund.Application": {
+      "path": "src/MOD.Jund.Application/MOD.Jund.Application.abppkg",
+      "folder": "src"
+    },
+    "MOD.Jund.Application.Tests": {
+      "path": "test/MOD.Jund.Application.Tests/MOD.Jund.Application.Tests.abppkg",
+      "folder": "test"
+    },
+    "MOD.Jund.Domain.Shared": {
+      "path": "src/MOD.Jund.Domain.Shared/MOD.Jund.Domain.Shared.abppkg",
+      "folder": "src"
+    },
+    "MOD.Jund.Application.Contracts": {
+      "path": "src/MOD.Jund.Application.Contracts/MOD.Jund.Application.Contracts.abppkg",
+      "folder": "src"
+    },
+    "MOD.Jund.HttpApi": {
+      "path": "src/MOD.Jund.HttpApi/MOD.Jund.HttpApi.abppkg",
+      "folder": "src"
+    },
+    "MOD.Jund.HttpApi.Client": {
+      "path": "src/MOD.Jund.HttpApi.Client/MOD.Jund.HttpApi.Client.abppkg",
+      "folder": "src"
+    },
+    "MOD.Jund.EntityFrameworkCore.Tests": {
+      "path": "test/MOD.Jund.EntityFrameworkCore.Tests/MOD.Jund.EntityFrameworkCore.Tests.abppkg",
+      "folder": "test"
+    },
+    "MOD.Jund.EntityFrameworkCore": {
+      "path": "src/MOD.Jund.EntityFrameworkCore/MOD.Jund.EntityFrameworkCore.abppkg",
+      "folder": "src"
+    },
+    "MOD.Jund.TestBase": {
+      "path": "test/MOD.Jund.TestBase/MOD.Jund.TestBase.abppkg",
+      "folder": "test"
+    },
+    "MOD.Jund.Domain.Tests": {
+      "path": "test/MOD.Jund.Domain.Tests/MOD.Jund.Domain.Tests.abppkg",
+      "folder": "test"
+    },
+    "MOD.Jund.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/MOD.Jund.HttpApi.Client.ConsoleTestApp/MOD.Jund.HttpApi.Client.ConsoleTestApp.abppkg",
+      "folder": "test"
+    },
+    "MOD.Jund.DbMigrator": {
+      "path": "src/MOD.Jund.DbMigrator/MOD.Jund.DbMigrator.abppkg",
+      "folder": "src"
+    },
+    "MOD.Jund.HttpApi.Host": {
+      "path": "src/MOD.Jund.HttpApi.Host/MOD.Jund.HttpApi.Host.abppkg",
+      "folder": "src"
+    },
+    "MOD.Jund.Domain": {
+      "path": "src/MOD.Jund.Domain/MOD.Jund.Domain.abppkg",
+      "folder": "src"
+    }
+  }
+}

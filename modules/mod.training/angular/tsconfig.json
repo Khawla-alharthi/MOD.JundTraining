@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.prod.json",
+  "compilerOptions": {
+    "paths": {
+      "@m-oD/training": ["projects/training/src/public-api.ts"],
+      "@m-oD/training/config": [
+        "projects/training/config/src/public-api.ts"
+      ]
+    }
+  }
+}
